@@ -204,7 +204,7 @@ function toArray(data) {
 }
 
 //challenge 1
-function expenseReport(arr) {
+function challengeOne(arr) {
 
     for (let i = 0; i < arr.length; i++) {
 
@@ -217,5 +217,23 @@ function expenseReport(arr) {
         }
     }
 }
+//challenge 2
+function challengeTwo(arr) {
+    for (let i = 0; i < arr.length; i++) {
 
-console.log(expenseReport(input));
+        for (let j = 1; j < arr.length; j++) {
+
+            for (let k = 2; k < arr.length; k++) {
+                let value1 = Number(arr[i])
+                let value2 = Number(arr[j])
+                let value3 = Number(arr[k])
+                if (value1 + value2 + value3 == 2020) {
+                    return (value1 * value2 * value3)
+                }
+
+            }
+
+        }
+    }
+}
+console.log(challengeTwo(input));
